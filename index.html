@@ -20,9 +20,19 @@
 
         <div id="checklist" class="hidden">
             <h2 id="checklist-title"></h2>
-            <ul id="checklist-items"></ul>
+            <table id="checklist-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Done</th>
+                        <th>Timer</th>
+                        <th>Controls</th>
+                    </tr>
+                </thead>
+                <tbody id="checklist-items"></tbody>
+            </table>
             <button onclick="showMotivation()" aria-label="Get a Motivational Pep Talk">Get a Pep Talk!</button>
-            <button onclick="resetChecklist()" aria-label="Reset Checklist">Reset Checklist</button>
+            <button onclick="resetChecklist()" aria-label="Reset Checklist and Timers">Reset Checklist</button>
         </div>
 
         <div id="motivation" class="hidden">
@@ -30,16 +40,6 @@
             <p id="motivational-message"></p>
             <button onclick="backToChecklist()" aria-label="Back to Checklist">Back to Checklist</button>
         </div>
-
-        <div id="timer" class="hidden">
-            <h2>2-Minute Warm-Up Timer</h2>
-            <p id="timer-display">2:00</p>
-            <button onclick="startTimer()" aria-label="Start Warm-Up Timer">Start Warm-Up</button>
-            <button onclick="resetTimer()" aria-label="Reset Timer">Reset Timer</button>
-            <button onclick="backToChecklist()" aria-label="Back to Checklist">Back to Checklist</button>
-        </div>
-
-        <button id="timer-button" class="hidden" onclick="showTimer()" aria-label="Start a Quick Warm-Up">Do a Quick Warm-Up!</button>
     </div>
     <script src="script.js"></script>
 </body>
