@@ -186,7 +186,7 @@ const checklists = {
         "Stretch legs for 30 seconds",
         "Practice waltz jump",
         "Practice salchow",
-        "Do Freestyle 3 dance step sequence",
+        "Do Freestyle 3 dance steps",
         "Try sit spin 3 times"
     ],
     competition: [
@@ -212,7 +212,17 @@ const motivations = [
     "Spin like a superstar!",
     "Your jumps are amazing—keep it up!",
     "You’ve got this, skate with confidence!",
-    "Show the ice who’s boss!"
+    "Show the ice who’s boss!",
+    "Twirl with all your sparkle!",
+    "Your skating lights up the rink!",
+    "Jump high and shine bright!",
+    "You’re a skating sensation!",
+    "Glide with grace, you’re ace!",
+    "Spin fast, have a blast!",
+    "You’re unstoppable on the ice!",
+    "Skate with heart, you’re a star!",
+    "Your moves are pure magic!",
+    "Keep shining, skating queen!"
 ];
 
 let currentMode = '';
