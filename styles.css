@@ -52,7 +52,6 @@ button:focus {
 
 button.sparkle {
     position: relative;
-    overflow: hidden;
     animation: sparkleEffect 0.5s ease-out;
 }
 
@@ -79,7 +78,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 10px 0;
-    table-layout: fixed;
 }
 
 th, td {
@@ -106,16 +104,19 @@ th:nth-child(3), td:nth-child(3) {
 
 th:nth-child(4), td:nth-child(4) {
     width: 30%;
+    min-width: 100px;
     text-align: center;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 5px;
     align-items: center;
     justify-content: center;
 }
 
 th:nth-child(4) button, td:nth-child(4) button {
+    width: auto;
+    max-width: 100%;
     padding: 6px 10px;
     font-size: 12px;
 }
@@ -130,10 +131,23 @@ td {
     font-size: 16px;
 }
 
+.table-responsive table {
+    border: 1px solid #ff69b4;
+}
+
+.table-responsive th, .table-responsive td {
+    border: 1px solid #ff69b4;
+}
+
+.table-responsive th {
+    background-color: #ff69b4;
+    color: white;
+}
+
 @media (max-width: 40rem) {
     th, td {
         font-size: 14px;
-        padding: 5px;
+        padding: 6px;
     }
     button {
         font-size: 12px;
@@ -143,16 +157,19 @@ td {
         width: 40%;
         min-width: 100px;
     }
+    th:nth-child(3), td:nth-child(3) {
+        width: 15%;
+    }
     th:nth-child(4), td:nth-child(4) {
         width: 35%;
         flex-direction: column;
         gap: 3px;
-        padding: 5px;
+        padding: 6px;
     }
     th:nth-child(4) button, td:nth-child(4) button {
         width: 100%;
         min-width: 80px;
-        padding: 5px;
+        padding: 4px;
         font-size: 12px;
     }
 }
