@@ -42,9 +42,9 @@ window.showChecklist = function() {
                 <td><input type="checkbox" id="task-${index}" aria-label="${item}"></td>
                 <td><span class="timer-display" id="timer-display-${index}">2:00</span></td>
                 <td>
-                    <button onclick="startTimer(${index})" aria-label="Start Timer for ${item}">Start</button>
-                    <button onclick="stopTimer(${index})" aria-label="Stop Timer for ${item}">Stop</button>
-                    <button onclick="resetTimer(${index})" aria-label="Reset Timer for ${item}">Reset</button>
+                    <button class="timer-button" onclick="startTimer(${index})" aria-label="Start Timer for ${item}">Start</button>
+                    <button class="timer-button" onclick="stopTimer(${index})" aria-label="Stop Timer for ${item}">Stop</button>
+                    <button class="timer-button" onclick="resetTimer(${index})" aria-label="Reset Timer for ${item}">Reset</button>
                 </td>
             `;
             checklistItems.appendChild(tr);
@@ -59,6 +59,12 @@ window.showChecklist = function() {
                 } else if (!timerStates[index].paused && timerStates[index].time > 0) {
                     startTimer(index); // Resume if unchecked and timer not finished
                 }
+            });
+            
+            // Add sparkle effect to timer buttons
+            const buttons = tr.querySelectorAll('.timer-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => triggerSparkle(button));
             });
         });
     } else {
@@ -155,6 +161,14 @@ window.resetTimer = function(index) {
         console.error(`Timer display for index ${index} not found`);
     }
 };
+
+// Sparkle effect trigger
+function triggerSparkle(button) {
+    button.classList.add('sparkle');
+    setTimeout(() => {
+        button.classList.remove('sparkle');
+    }, 500); // Match animation duration
+}
 
 // Data and initialization
 const gearChecklists = {
