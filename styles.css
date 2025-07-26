@@ -6,9 +6,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     text-align: center;
-    margin: 0; 
+    margin: 0;
     padding: 20px;
-    padding-bottom: 70px; 
+    padding-bottom: 70px;
 }
 
 .container {
@@ -38,6 +38,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -49,7 +50,6 @@ button:focus {
     outline-offset: 2px;
 }
 
-/* Sparkle effect for timer buttons */
 button.sparkle {
     position: relative;
     overflow: hidden;
@@ -75,29 +75,28 @@ button.sparkle {
     display: none;
 }
 
-/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 10px 0;
-    table-layout: fixed; 
+    table-layout: fixed;
 }
 
 th, td {
     padding: 8px;
     border: 1px solid #ff69b4;
     text-align: left;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 th:nth-child(1), td:nth-child(1) {
     width: 45%;
-    min-width: 150px; 
-    white-space: normal; 
+    min-width: 150px;
+    white-space: normal;
 }
 
 th:nth-child(2), td:nth-child(2) {
-    width: 10%; 
+    width: 10%;
     text-align: center;
 }
 
@@ -109,7 +108,7 @@ th:nth-child(3), td:nth-child(3) {
 th:nth-child(4), td:nth-child(4) {
     width: 30%;
     text-align: center;
-    display: flex; 
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 5px;
@@ -132,7 +131,7 @@ td {
     font-size: 16px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 40rem) {
     th, td {
         font-size: 14px;
         padding: 6px;
@@ -142,15 +141,20 @@ td {
         padding: 6px 12px;
     }
     th:nth-child(1), td:nth-child(1) {
-        min-width: 100px; 
+        min-width: 100px;
+    }
+    th:nth-child(4), td:nth-child(4) {
+        flex-direction: column;
+        gap: 3px;
+        padding: 8px;
     }
     th:nth-child(4) button, td:nth-child(4) button {
-        padding: 4px 8px; 
-        font-size: 10px;
+        width: 100%;
+        padding: 6px;
+        font-size: 12px;
     }
 }
 
-/* Checkbox Styling */
 input[type="checkbox"] {
     appearance: none;
     width: 18px;
@@ -173,7 +177,6 @@ input[type="checkbox"]:checked + span {
     color: #888;
 }
 
-/* Timer Styling */
 .timer-display {
     font-size: 16px;
     color: #ff69b4;
@@ -192,13 +195,12 @@ input[type="checkbox"]:checked + span {
     100% { transform: scale(1); }
 }
 
-/* Footer Styling */
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100vw; 
+    width: 100vw;
     background-color: #ff69b4;
     color: white;
     padding: 10px 0;
@@ -210,7 +212,7 @@ footer p {
     margin: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 40rem) {
     footer {
         font-size: 14px;
     }

@@ -1,4 +1,3 @@
-// Define global functions for onclick handlers
 window.showGearCheck = function(mode) {
     currentMode = mode;
     const modeSelection = document.getElementById('mode-selection');
@@ -51,17 +50,15 @@ window.showChecklist = function() {
             timerIntervals[index] = null;
             timerStates[index] = { time: 120, paused: true };
             
-            // Add checkbox event listener to stop timer
             const checkbox = document.getElementById(`task-${index}`);
             checkbox.addEventListener('change', () => {
                 if (checkbox.checked) {
                     stopTimer(index);
                 } else if (!timerStates[index].paused && timerStates[index].time > 0) {
-                    startTimer(index); // Resume if unchecked and timer not finished
+                    startTimer(index);
                 }
             });
             
-            // Add sparkle effect to timer buttons
             const buttons = tr.querySelectorAll('.timer-button');
             buttons.forEach(button => {
                 button.addEventListener('click', () => triggerSparkle(button));
@@ -162,15 +159,13 @@ window.resetTimer = function(index) {
     }
 };
 
-// Sparkle effect trigger
 function triggerSparkle(button) {
     button.classList.add('sparkle');
     setTimeout(() => {
         button.classList.remove('sparkle');
-    }, 500); // Match animation duration
+    }, 500);
 }
 
-// Data and initialization
 const gearChecklists = {
     practice: [
         "Skates",
@@ -244,7 +239,6 @@ let timerIntervals = [];
 let timerStates = [];
 let inspirationInterval = null;
 
-// Initialize inspiration footer
 document.addEventListener('DOMContentLoaded', () => {
     const rotateInspiration = () => {
         const messageElement = document.getElementById('inspiration-message');
