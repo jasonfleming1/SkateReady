@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkateReady - Get Ready to Shine!</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add blank favicon to prevent 404 error -->
+    <link rel="icon" href="data:,">
 </head>
 <body>
     <div class="container">
         <h1>SkateReady 🌟</h1>
         <p>Hi, superstar! Get ready to skate in 10 minutes!</p>
         
-        <div class="mode-selection">
+        <div id="mode-selection">
             <h2>Pick Your Mode:</h2>
             <button onclick="showChecklist('practice')">Practice</button>
             <button onclick="showChecklist('competition')">Competition</button>
