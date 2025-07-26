@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkateReady - Get Ready to Shine!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SkateReady 🌟</h1>
+        <p>Hi, superstar! Get ready to skate in 10 minutes!</p>
+        
+        <div class="mode-selection">
+            <h2>Pick Your Mode:</h2>
+            <button onclick="showChecklist('practice')">Practice</button>
+            <button onclick="showChecklist('competition')">Competition</button>
+            <button onclick="showChecklist('show')">Show</button>
+        </div>
+
+        <div id="checklist" class="hidden">
+            <h2 id="checklist-title"></h2>
+            <ul id="checklist-items"></ul>
+            <button onclick="showMotivation()">Get a Pep Talk!</button>
+        </div>
+
+        <div id="motivation" class="hidden">
+            <h2>You're a Star! 🌟</h2>
+            <p id="motivational-message"></p>
+            <button onclick="backToChecklist()">Back to Checklist</button>
+        </div>
+
+        <div id="timer" class="hidden">
+            <h2>2-Minute Warm-Up Timer</h2>
+            <p id="timer-display">2:00</p>
+            <button onclick="startTimer()">Start Warm-Up</button>
+            <button onclick="backToChecklist()">Back to Checklist</button>
+        </div>
+
+        <button onclick="showTimer()" id="timer-button" class="hidden">Do a Quick Warm-Up!</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
