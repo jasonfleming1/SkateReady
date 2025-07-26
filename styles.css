@@ -74,10 +74,17 @@ button.sparkle {
     display: none;
 }
 
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 10px 0;
+    min-width: 400px; /* Ensures table doesn't shrink too much */
 }
 
 th, td {
@@ -98,7 +105,7 @@ th:nth-child(2), td:nth-child(2) {
 }
 
 th:nth-child(3), td:nth-child(3) {
-    width: 10%;
+    width: 15%;
     text-align: center;
 }
 
@@ -171,6 +178,13 @@ td {
         min-width: 80px;
         padding: 4px;
         font-size: 12px;
+    }
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    table {
+        min-width: 400px; /* Maintain minimum width for readability */
     }
 }
 
