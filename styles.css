@@ -86,7 +86,6 @@ th, td {
     padding: 8px;
     border: 1px solid #ff69b4;
     text-align: left;
-    overflow: hidden;
 }
 
 th:nth-child(1), td:nth-child(1) {
@@ -134,23 +133,26 @@ td {
 @media (max-width: 40rem) {
     th, td {
         font-size: 14px;
-        padding: 6px;
+        padding: 5px;
     }
     button {
         font-size: 12px;
         padding: 6px 12px;
     }
     th:nth-child(1), td:nth-child(1) {
+        width: 40%;
         min-width: 100px;
     }
     th:nth-child(4), td:nth-child(4) {
+        width: 35%;
         flex-direction: column;
         gap: 3px;
-        padding: 8px;
+        padding: 5px;
     }
     th:nth-child(4) button, td:nth-child(4) button {
         width: 100%;
-        padding: 6px;
+        min-width: 80px;
+        padding: 5px;
         font-size: 12px;
     }
 }

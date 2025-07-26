@@ -72,7 +72,7 @@ window.showChecklist = function() {
 window.resetChecklist = function() {
     const checklistItems = document.getElementById('checklist-items');
     const checkboxes = checklistItems.querySelectorAll('input[type="checkbox"]');
-    const timerDisplays = checklistItems.querySelectorAll('.timer-display');
+    const timerDisplays = document.getElementById('checklist-items').querySelectorAll('.timer-display');
     
     checkboxes.forEach(checkbox => {
         checkbox.checked = false;
