@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Show the ice who’s boss!"
     ];
 
+    let timerInterval = null; // Store the timer interval
+
     window.showChecklist = function(mode) {
         const modeSelection = document.getElementById('mode-selection');
         const checklist = document.getElementById('checklist');
@@ -43,14 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('checklist-title').textContent = `${mode.charAt(0).toUpperCase() + mode.slice(1)} Checklist`;
             const checklistItems = document.getElementById('checklist-items');
             checklistItems.innerHTML = '';
-            checklists[mode].forEach(item => {
+            checklists[mode].forEach((item, index) => {
                 const li = document.createElement('li');
-                li.textContent = item;
+                li.innerHTML = `<input type="checkbox" id="task-${index}" aria-label="${item}"><label for="task-${index}"><span>${item}</span></label>`;
                 checklistItems.appendChild(li);
             });
         } else {
             console.error('One or more elements not found:', { modeSelection, checklist, timerButton });
         }
+    };
+
+    window.resetChecklist = function() {
+        const checklistItems = document.getElementById('checklist-items').querySelectorAll('input[type="checkbox"]');
+        checklistItems.forEach(checkbox => {
+            checkbox.checked = false;
+        });
     };
 
     window.showMotivation = function() {
@@ -64,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
             motivation.classList.remove('hidden');
             const message = motivations[Math.floor(Math.random() * motivations.length)];
             document.getElementById('motivational-message').textContent = message;
+        } else {
+            console.error('One or more elements not found:', { checklist, timerButton, motivation });
         }
     };
 
@@ -78,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
             timer.classList.add('hidden');
             checklist.classList.remove('hidden');
             timerButton.classList.remove('hidden');
+        } else {
+            console.error('One or more elements not found:', { motivation, timer, checklist, timerButton });
         }
     };
 
@@ -90,23 +103,47 @@ document.addEventListener('DOMContentLoaded', () => {
             checklist.classList.add('hidden');
             timerButton.classList.add('hidden');
             timer.classList.remove('hidden');
+            resetTimer(); // Reset timer when showing
+        } else {
+            console.error('One or more elements not found:', { checklist, timerButton, timer });
         }
     };
 
     window.startTimer = function() {
+        if (timerInterval) {
+            clearInterval(timerInterval); // Clear any existing timer
+        }
         let time = 120; // 2 minutes in seconds
         const display = document.getElementById('timer-display');
         if (display) {
-            const interval = setInterval(() => {
+            display.classList.remove('finished');
+            display.textContent = '2:00';
+            timerInterval = setInterval(() => {
                 const minutes = Math.floor(time / 60);
                 const seconds = time % 60;
                 display.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
                 time--;
                 if (time < 0) {
-                    clearInterval(interval);
+                    clearInterval(timerInterval);
+                    timerInterval = null;
                     display.textContent = "Time's up! You're ready!";
+                    display.classList.add('finished');
                 }
             }, 1000);
+        } else {
+            console.error('Timer display element not found');
+        }
+    };
+
+    window.resetTimer = function() {
+        if (timerInterval) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        }
+        const display = document.getElementById('timer-display');
+        if (display) {
+            display.classList.remove('finished');
+            display.textContent = '2:00';
         }
     };
 });

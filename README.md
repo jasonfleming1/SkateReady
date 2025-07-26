@@ -14,31 +14,34 @@ SkateReady helps you get ready for:
 - **Show**: Wear your sparkly outfit and smile big for the audience!
 
 ### Features:
-- **Checklist**: Quick tasks to make sure you’re ready (takes ~5 minutes).
+- **Interactive Checklist**: Check off tasks as you complete them (takes ~5 minutes).
 - **Pep Talk**: Fun messages to boost your confidence! 😄
-- **Warm-Up Timer**: A 2-minute timer for quick stretches.
+- **Warm-Up Timer**: A 2-minute timer for quick stretches with start/reset options.
 - All done in about 10 minutes, so you’re ready to hit the ice!
 
 ---
 
 ## How to Use SkateReady 🧑‍🦰
-1. **Visit the App**: Go to [SkateReady on GitHub Pages](https://yjasonfleming1.github.io/SkateReady).
+1. **Visit the App**: Go to [SkateReady on GitHub Pages](https://jasonfleming1.github.io/SkateReady).
 2. **Pick Your Mode**:
    - Click **Practice**, **Competition**, or **Show**.
 3. **Follow the Checklist**: Check off tasks like tying your skates or practicing your salchow.
-4. **Get a Pep Talk**: Click “Get a Pep Talk!” for a fun message like “You’re a superstar!”
-5. **Warm Up**: Click “Do a Quick Warm-Up!” for a 2-minute stretch timer.
-6. **Skate!**: You’re ready to shine in ~10 minutes! 🌟
+4. **Reset Checklist**: Click "Reset Checklist" to start over.
+5. **Get a Pep Talk**: Click “Get a Pep Talk!” for a fun message like “You’re a superstar!”
+6. **Warm Up**: Click “Do a Quick Warm-Up!” for a 2-minute stretch timer. Reset it if needed.
+7. **Skate!**: You’re ready to shine in ~10 minutes! 🌟
 
 ---
 
 ## For Parents and Coaches 🧑‍🏫
 SkateReady is built for young skaters at SQSA Freestyle Level 3, preparing for Level 4. The tasks are based on Ice Sports Industry (ISI) skills, like waltz jumps, salchows, sit spins, and dance step sequences. It’s simple, safe, and hosted on GitHub Pages for everyone to use. No sign-ups or downloads needed—just visit the link!
+
 ---
 
 ## Why SkateReady is Awesome 😎
 
 - **Kid-Friendly**: Big buttons, bright colors, and easy words for 9-year-olds.
+- **Interactive**: Checkboxes to mark tasks done, with a reset option.
 - **Quick**: Get ready in ~10 minutes.
 - **Skater-Focused**: Tasks match SQSA Freestyle 3/4 skills, like jumps and spins.
 - **Free and Public**: Anyone can use it via the GitHub Pages link.

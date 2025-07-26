@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkateReady - Get Ready to Shine!</title>
+    <title>SkateReady 🌟</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Add blank favicon to prevent 404 error -->
-    <link rel="icon" href="data:,">
 </head>
 <body>
     <div class="container">
         <h1>SkateReady 🌟</h1>
         <p>Hi, superstar! Get ready to skate in 10 minutes!</p>
-        
+
         <div id="mode-selection">
             <h2>Pick Your Mode:</h2>
-            <button onclick="showChecklist('practice')">Practice</button>
-            <button onclick="showChecklist('competition')">Competition</button>
-            <button onclick="showChecklist('show')">Show</button>
+            <button onclick="showChecklist('practice')" aria-label="Select Practice Mode">Practice</button>
+            <button onclick="showChecklist('competition')" aria-label="Select Competition Mode">Competition</button>
+            <button onclick="showChecklist('show')" aria-label="Select Show Mode">Show</button>
         </div>
 
         <div id="checklist" class="hidden">
             <h2 id="checklist-title"></h2>
             <ul id="checklist-items"></ul>
-            <button onclick="showMotivation()">Get a Pep Talk!</button>
+            <button onclick="showMotivation()" aria-label="Get a Motivational Pep Talk">Get a Pep Talk!</button>
+            <button onclick="resetChecklist()" aria-label="Reset Checklist">Reset Checklist</button>
         </div>
 
         <div id="motivation" class="hidden">
             <h2>You're a Star! 🌟</h2>
             <p id="motivational-message"></p>
-            <button onclick="backToChecklist()">Back to Checklist</button>
+            <button onclick="backToChecklist()" aria-label="Back to Checklist">Back to Checklist</button>
         </div>
 
         <div id="timer" class="hidden">
             <h2>2-Minute Warm-Up Timer</h2>
             <p id="timer-display">2:00</p>
-            <button onclick="startTimer()">Start Warm-Up</button>
-            <button onclick="backToChecklist()">Back to Checklist</button>
+            <button onclick="startTimer()" aria-label="Start Warm-Up Timer">Start Warm-Up</button>
+            <button onclick="resetTimer()" aria-label="Reset Timer">Reset Timer</button>
+            <button onclick="backToChecklist()" aria-label="Back to Checklist">Back to Checklist</button>
         </div>
 
-        <button onclick="showTimer()" id="timer-button" class="hidden">Do a Quick Warm-Up!</button>
+        <button id="timer-button" class="hidden" onclick="showTimer()" aria-label="Start a Quick Warm-Up">Do a Quick Warm-Up!</button>
     </div>
     <script src="script.js"></script>
 </body>
