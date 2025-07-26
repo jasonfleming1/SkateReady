@@ -13,9 +13,23 @@
 
         <div id="mode-selection">
             <h2>Pick Your Mode:</h2>
-            <button onclick="showChecklist('practice')" aria-label="Select Practice Mode">Practice</button>
-            <button onclick="showChecklist('competition')" aria-label="Select Competition Mode">Competition</button>
-            <button onclick="showChecklist('show')" aria-label="Select Show Mode">Show</button>
+            <button onclick="showGearCheck('practice')" aria-label="Select Practice Mode">Practice</button>
+            <button onclick="showGearCheck('competition')" aria-label="Select Competition Mode">Competition</button>
+            <button onclick="showGearCheck('show')" aria-label="Select Show Mode">Show</button>
+        </div>
+
+        <div id="gear-check" class="hidden">
+            <h2 id="gear-check-title">Gear Checklist</h2>
+            <table id="gear-check-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Ready</th>
+                    </tr>
+                </thead>
+                <tbody id="gear-check-items"></tbody>
+            </table>
+            <button onclick="showChecklist()" aria-label="Continue to Task Checklist">Continue</button>
         </div>
 
         <div id="checklist" class="hidden">
@@ -31,16 +45,14 @@
                 </thead>
                 <tbody id="checklist-items"></tbody>
             </table>
-            <button onclick="showMotivation()" aria-label="Get a Motivational Pep Talk">Get a Pep Talk!</button>
+            <button onclick="returnToMode()" aria-label="Return to Mode Selection">Return to Mode</button>
             <button onclick="resetChecklist()" aria-label="Reset Checklist and Timers">Reset Checklist</button>
         </div>
-
-        <div id="motivation" class="hidden">
-            <h2>You're a Star! 🌟</h2>
-            <p id="motivational-message"></p>
-            <button onclick="backToChecklist()" aria-label="Back to Checklist">Back to Checklist</button>
-        </div>
     </div>
+
+    <footer id="inspiration-footer">
+        <p id="inspiration-message">You’re going to shine, superstar!</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
